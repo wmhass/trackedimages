@@ -62,8 +62,6 @@
 @end
 
 
-
-
 /**
  * @discussion This is a Swift like implementation: Implementing protocols in separated extensions(categories) makes the code more clear
  */
@@ -75,8 +73,8 @@
 @implementation InitialViewControllerPresenter(CustomLocationManagerDelegate)
 
 
-- (void)desiredLocationAchievedForLocationManager:(CustomLocationManager *)locationManager {
-    
+- (void)desiredLocationAchievedForLocationManager:(CustomLocationManager *)locationManager withLocation:(CLLocation *)location {
+    [self.interactor requestImagesForLocation:location];
 }
 
 @end

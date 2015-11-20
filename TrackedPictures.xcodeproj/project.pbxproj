@@ -21,6 +21,8 @@
 		3D20E40A1BFF9A34000E2332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20E4091BFF9A34000E2332 /* CoreLocation.framework */; };
 		3D20E40D1BFF9B7B000E2332 /* CustomLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */; };
 		3D20E4131BFFB1B4000E2332 /* InitialViewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */; };
+		3D20E4171BFFB882000E2332 /* PanoramioPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E4161BFFB882000E2332 /* PanoramioPicture.m */; };
+		3D20E41A1BFFB9B0000E2332 /* PanoramioPictureOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E4191BFFB9B0000E2332 /* PanoramioPictureOwner.m */; };
 		6532AC5AD0BCA274231FD2B5 /* libPods-TrackedPictures.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F43F8CB6C730D66FF3601E4D /* libPods-TrackedPictures.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,10 @@
 		3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLocationManager.m; sourceTree = "<group>"; };
 		3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewInteractor.h; sourceTree = "<group>"; };
 		3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewInteractor.m; sourceTree = "<group>"; };
+		3D20E4151BFFB882000E2332 /* PanoramioPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramioPicture.h; sourceTree = "<group>"; };
+		3D20E4161BFFB882000E2332 /* PanoramioPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramioPicture.m; sourceTree = "<group>"; };
+		3D20E4181BFFB9B0000E2332 /* PanoramioPictureOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramioPictureOwner.h; sourceTree = "<group>"; };
+		3D20E4191BFFB9B0000E2332 /* PanoramioPictureOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramioPictureOwner.m; sourceTree = "<group>"; };
 		541413EF83FD3676F0D0122B /* Pods-TrackedPictures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackedPictures.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackedPictures/Pods-TrackedPictures.release.xcconfig"; sourceTree = "<group>"; };
 		A7B5A02A3D81E4337C88D2DE /* Pods-TrackedPictures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackedPictures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackedPictures/Pods-TrackedPictures.debug.xcconfig"; sourceTree = "<group>"; };
 		F43F8CB6C730D66FF3601E4D /* libPods-TrackedPictures.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrackedPictures.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +123,7 @@
 		3D20E3CB1BFF8B72000E2332 /* TrackedPictures */ = {
 			isa = PBXGroup;
 			children = (
+				3D20E4141BFFB84C000E2332 /* Models */,
 				3D20E3FC1BFF8D67000E2332 /* Helpers */,
 				3D20E3F21BFF8B7B000E2332 /* ViewControllers */,
 				3D20E3D01BFF8B72000E2332 /* AppDelegate.h */,
@@ -182,12 +189,31 @@
 		3D20E4021BFF96B2000E2332 /* Controller Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				3D20E41B1BFFC08A000E2332 /* DisplayObject */,
 				3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */,
 				3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */,
 				3D20E4061BFF96EE000E2332 /* InitialViewControllerPresenter.h */,
 				3D20E4071BFF96EE000E2332 /* InitialViewControllerPresenter.m */,
 			);
 			name = "Controller Dependencies";
+			sourceTree = "<group>";
+		};
+		3D20E4141BFFB84C000E2332 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D20E4181BFFB9B0000E2332 /* PanoramioPictureOwner.h */,
+				3D20E4191BFFB9B0000E2332 /* PanoramioPictureOwner.m */,
+				3D20E4151BFFB882000E2332 /* PanoramioPicture.h */,
+				3D20E4161BFFB882000E2332 /* PanoramioPicture.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D20E41B1BFFC08A000E2332 /* DisplayObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DisplayObject;
 			sourceTree = "<group>";
 		};
 		A36C47019C75E3C327612B80 /* Pods */ = {
@@ -359,6 +385,8 @@
 				3D20E3D21BFF8B72000E2332 /* AppDelegate.m in Sources */,
 				3D20E40D1BFF9B7B000E2332 /* CustomLocationManager.m in Sources */,
 				3D20E3CF1BFF8B72000E2332 /* main.m in Sources */,
+				3D20E4171BFFB882000E2332 /* PanoramioPicture.m in Sources */,
+				3D20E41A1BFFB9B0000E2332 /* PanoramioPictureOwner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

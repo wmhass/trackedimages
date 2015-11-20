@@ -10,10 +10,11 @@
 #import "InitialView.h"
 #import "InitialViewControllerPresenter.h"
 
-@interface InitialViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface InitialViewController () <UITableViewDataSource, UITableViewDelegate, InitialViewControllerPresenterDelegate>
 
 @property (nonatomic,retain) InitialView *view;
 @property (strong, nonatomic) InitialViewControllerPresenter *presenter;
+@property (strong, nonatomic) NSMutableArray *pictures;
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.presenter = [[InitialViewControllerPresenter alloc] init];
+    self.pictures = [[NSMutableArray alloc] init];
 }
 
 #pragma mark - IBActions
@@ -54,5 +56,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+
+#pragma mark - InitialViewControllerPresenterDelegate
+
+@interface InitialViewController(InitialViewControllerPresenterDelegate)
+@end
+
+@implementation InitialViewController(InitialViewControllerPresenterDelegate)
+
+- (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter loadedPictures:(NSArray *)pictures {
+    
+}
+
+- (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter errorOccurredLoadingPictures:(NSString *)errorMessage {
+    
+}
 
 @end
