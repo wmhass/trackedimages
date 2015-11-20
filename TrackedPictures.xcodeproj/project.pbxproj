@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		3D20E3CF1BFF8B72000E2332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3CE1BFF8B72000E2332 /* main.m */; };
 		3D20E3D21BFF8B72000E2332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3D11BFF8B72000E2332 /* AppDelegate.m */; };
-		3D20E3D51BFF8B72000E2332 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3D41BFF8B72000E2332 /* ViewController.m */; };
 		3D20E3D81BFF8B72000E2332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D20E3D61BFF8B72000E2332 /* Main.storyboard */; };
 		3D20E3DA1BFF8B72000E2332 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D20E3D91BFF8B72000E2332 /* Images.xcassets */; };
 		3D20E3DD1BFF8B72000E2332 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D20E3DB1BFF8B72000E2332 /* LaunchScreen.xib */; };
 		3D20E3E91BFF8B72000E2332 /* TrackedPicturesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3E81BFF8B72000E2332 /* TrackedPicturesTests.m */; };
+		3D20E3F51BFF8BC0000E2332 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3F41BFF8BC0000E2332 /* InitialViewController.m */; };
+		3D20E3FB1BFF8C88000E2332 /* InitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3FA1BFF8C88000E2332 /* InitialView.m */; };
+		3D20E3FF1BFF8D86000E2332 /* AppTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E3FE1BFF8D86000E2332 /* AppTheme.m */; };
+		3D20E4011BFF8ED7000E2332 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D20E4001BFF8ED7000E2332 /* Localizable.strings */; };
+		3D20E4081BFF96EE000E2332 /* InitialViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E4071BFF96EE000E2332 /* InitialViewControllerPresenter.m */; };
+		3D20E40A1BFF9A34000E2332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20E4091BFF9A34000E2332 /* CoreLocation.framework */; };
+		3D20E40D1BFF9B7B000E2332 /* CustomLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */; };
+		3D20E4131BFFB1B4000E2332 /* InitialViewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,26 @@
 		3D20E3CE1BFF8B72000E2332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D20E3D01BFF8B72000E2332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D20E3D11BFF8B72000E2332 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3D20E3D31BFF8B72000E2332 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D20E3D41BFF8B72000E2332 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D20E3D71BFF8B72000E2332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D20E3D91BFF8B72000E2332 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D20E3DC1BFF8B72000E2332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3D20E3E21BFF8B72000E2332 /* TrackedPicturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackedPicturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D20E3E71BFF8B72000E2332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D20E3E81BFF8B72000E2332 /* TrackedPicturesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackedPicturesTests.m; sourceTree = "<group>"; };
+		3D20E3F31BFF8BC0000E2332 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		3D20E3F41BFF8BC0000E2332 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		3D20E3F91BFF8C88000E2332 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialView.h; sourceTree = "<group>"; };
+		3D20E3FA1BFF8C88000E2332 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialView.m; sourceTree = "<group>"; };
+		3D20E3FD1BFF8D86000E2332 /* AppTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTheme.h; sourceTree = "<group>"; };
+		3D20E3FE1BFF8D86000E2332 /* AppTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTheme.m; sourceTree = "<group>"; };
+		3D20E4001BFF8ED7000E2332 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3D20E4061BFF96EE000E2332 /* InitialViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewControllerPresenter.h; sourceTree = "<group>"; };
+		3D20E4071BFF96EE000E2332 /* InitialViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewControllerPresenter.m; sourceTree = "<group>"; };
+		3D20E4091BFF9A34000E2332 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D20E40B1BFF9B7B000E2332 /* CustomLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLocationManager.h; sourceTree = "<group>"; };
+		3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLocationManager.m; sourceTree = "<group>"; };
+		3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewInteractor.h; sourceTree = "<group>"; };
+		3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewInteractor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D20E40A1BFF9A34000E2332 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +83,7 @@
 		3D20E3C01BFF8B72000E2332 = {
 			isa = PBXGroup;
 			children = (
+				3D20E4091BFF9A34000E2332 /* CoreLocation.framework */,
 				3D20E3CB1BFF8B72000E2332 /* TrackedPictures */,
 				3D20E3E51BFF8B72000E2332 /* TrackedPicturesTests */,
 				3D20E3CA1BFF8B72000E2332 /* Products */,
@@ -81,10 +102,10 @@
 		3D20E3CB1BFF8B72000E2332 /* TrackedPictures */ = {
 			isa = PBXGroup;
 			children = (
+				3D20E3FC1BFF8D67000E2332 /* Helpers */,
+				3D20E3F21BFF8B7B000E2332 /* ViewControllers */,
 				3D20E3D01BFF8B72000E2332 /* AppDelegate.h */,
 				3D20E3D11BFF8B72000E2332 /* AppDelegate.m */,
-				3D20E3D31BFF8B72000E2332 /* ViewController.h */,
-				3D20E3D41BFF8B72000E2332 /* ViewController.m */,
 				3D20E3D61BFF8B72000E2332 /* Main.storyboard */,
 				3D20E3D91BFF8B72000E2332 /* Images.xcassets */,
 				3D20E3DB1BFF8B72000E2332 /* LaunchScreen.xib */,
@@ -98,6 +119,7 @@
 			children = (
 				3D20E3CD1BFF8B72000E2332 /* Info.plist */,
 				3D20E3CE1BFF8B72000E2332 /* main.m */,
+				3D20E4001BFF8ED7000E2332 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +139,40 @@
 				3D20E3E71BFF8B72000E2332 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D20E3F21BFF8B7B000E2332 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D20E4021BFF96B2000E2332 /* Controller Dependencies */,
+				3D20E3F91BFF8C88000E2332 /* InitialView.h */,
+				3D20E3FA1BFF8C88000E2332 /* InitialView.m */,
+				3D20E3F31BFF8BC0000E2332 /* InitialViewController.h */,
+				3D20E3F41BFF8BC0000E2332 /* InitialViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D20E3FC1BFF8D67000E2332 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3D20E40B1BFF9B7B000E2332 /* CustomLocationManager.h */,
+				3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */,
+				3D20E3FD1BFF8D86000E2332 /* AppTheme.h */,
+				3D20E3FE1BFF8D86000E2332 /* AppTheme.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3D20E4021BFF96B2000E2332 /* Controller Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */,
+				3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */,
+				3D20E4061BFF96EE000E2332 /* InitialViewControllerPresenter.h */,
+				3D20E4071BFF96EE000E2332 /* InitialViewControllerPresenter.m */,
+			);
+			name = "Controller Dependencies";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D20E3D81BFF8B72000E2332 /* Main.storyboard in Resources */,
+				3D20E4011BFF8ED7000E2332 /* Localizable.strings in Resources */,
 				3D20E3DD1BFF8B72000E2332 /* LaunchScreen.xib in Resources */,
 				3D20E3DA1BFF8B72000E2332 /* Images.xcassets in Resources */,
 			);
@@ -219,8 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D20E3D51BFF8B72000E2332 /* ViewController.m in Sources */,
+				3D20E3F51BFF8BC0000E2332 /* InitialViewController.m in Sources */,
+				3D20E3FB1BFF8C88000E2332 /* InitialView.m in Sources */,
+				3D20E4131BFFB1B4000E2332 /* InitialViewInteractor.m in Sources */,
+				3D20E4081BFF96EE000E2332 /* InitialViewControllerPresenter.m in Sources */,
+				3D20E3FF1BFF8D86000E2332 /* AppTheme.m in Sources */,
 				3D20E3D21BFF8B72000E2332 /* AppDelegate.m in Sources */,
+				3D20E40D1BFF9B7B000E2332 /* CustomLocationManager.m in Sources */,
 				3D20E3CF1BFF8B72000E2332 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

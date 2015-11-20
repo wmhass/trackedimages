@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TrackedPictures
+
+  Created by William Hass on 11/20/15.
+  Copyright (c) 2015 William Hass. All rights reserved.
+*/
+
+"START_WORD" = "Start";
+
+"EMPTY_STATE_MESSAGE" = "Oops, Nothing here yet! Touch start and let's take some pictures!";
+
+"INSTRUCTIONS_MESSAGE" = "Once you take pictures, they'll appear here! What are you waiting for?! Let's walk!";
+
+"STOP_WORD" = "Stop";
