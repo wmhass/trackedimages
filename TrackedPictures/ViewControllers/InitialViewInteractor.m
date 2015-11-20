@@ -33,9 +33,14 @@
 
 #pragma mark - Private
 
++ (NSString *)urlForLocation:(CLLocation *)location {
+    
+    return [NSString stringWithFormat:@"http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=20&minx=%.10f&miny=%.10f&maxx=%.10f&maxy=%.10f&size=medium&mapfilter=true",location.coordinate.longitude,location.coordinate.longitude, location.coordinate.latitude,location.coordinate.latitude];
+}
+
 - (void)executeRequestForLocation:(CLLocation *)location {
     
-    NSString *urlString = @"http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=20&minx=-180&miny=-90&maxx=180&maxy=90&size=medium&mapfilter=true";
+    NSString *urlString = [InitialViewInteractor urlForLocation:location];
     NSURL *URL = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     

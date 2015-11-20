@@ -11,8 +11,8 @@
 @interface PanoramioPictureOwner : NSObject
 
 @property (strong, nonatomic) NSNumber *ownerID;
-@property (strong, nonatomic) NSString *ownerName;
-@property (strong, nonatomic) NSURL *ownerURL;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSURL *URL;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

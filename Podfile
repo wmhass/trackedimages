@@ -6,6 +6,7 @@ platform :ios, '7.0'
 
 target 'TrackedPictures' do
 pod "AFNetworking", "~> 2.0"
+pod 'SDWebImage', '~>3.7'
 end
 
 target 'TrackedPicturesTests' do

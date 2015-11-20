@@ -13,7 +13,6 @@ CGFloat const InitialViewFastAnimationDuration = 0.15;
 
 @interface InitialView()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
 @property (weak, nonatomic) IBOutlet UILabel *emptyStateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
@@ -43,6 +42,7 @@ CGFloat const InitialViewFastAnimationDuration = 0.15;
     // We don't want to present extra empty rows
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.tableHeaderView.backgroundColor = [AppTheme tableHeaderColor];
+    self.tableView.allowsSelection = NO;
     
     self.emptyStateLabel.text = NSLocalizedString(@"EMPTY_STATE_MESSAGE", nil);
     self.emptyStateLabel.textColor = [AppTheme lightGrayText];

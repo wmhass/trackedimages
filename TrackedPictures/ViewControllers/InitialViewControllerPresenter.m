@@ -88,11 +88,15 @@
 @implementation InitialViewControllerPresenter(InitialViewInteractorDelegate)
 
 - (void)initialViewInteractor:(InitialViewInteractor *)interactor didLoadImages:(NSArray *)images {
-    
+    if([self.delegate respondsToSelector:@selector(initialViewControllerPresenter:loadedPictures:)]) {
+        [self.delegate initialViewControllerPresenter:self loadedPictures:images];
+    }
 }
 
 - (void)initialViewInteractor:(InitialViewInteractor *)interactor errorLoadingImages:(NSError *)error {
-    
+    if([self.delegate respondsToSelector:@selector(initialViewControllerPresenter:errorOccurredLoadingPictures:)]) {
+        [self.delegate initialViewControllerPresenter:self errorOccurredLoadingPictures:error.localizedDescription];
+    }
 }
 
 @end

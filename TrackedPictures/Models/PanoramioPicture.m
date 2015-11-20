@@ -33,7 +33,7 @@
         NSString *uploadStringDate = dictionary[@"upload_date"];
         if(uploadStringDate.length > 0) {
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"dd MMMM yyyyy";
+            dateFormatter.dateFormat = @"dd MMMM yyyy";
             _uploadDate = [dateFormatter dateFromString:uploadStringDate];
         }
     }

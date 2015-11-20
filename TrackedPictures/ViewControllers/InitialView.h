@@ -10,6 +10,8 @@
 
 @interface InitialView : UIView
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 - (void)updateLocationButton:(BOOL)tracking;
 - (void)setEmptyStateVisible:(BOOL)visible;
 - (void)setInstructionsVisible:(BOOL)visible;

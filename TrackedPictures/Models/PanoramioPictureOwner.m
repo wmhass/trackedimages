@@ -15,11 +15,11 @@
     self = [super init];
     if (self) {
         _ownerID = dictionary[@"owner_id"];
-        _ownerName = dictionary[@"owner_name"];
+        _name = dictionary[@"owner_name"];
         
         NSString *stringURL = dictionary[@"owner_url"];
         if(stringURL.length > 0) {
-            _ownerURL = [NSURL URLWithString:stringURL];
+            _URL = [NSURL URLWithString:stringURL];
         }
     }
     return self;
