@@ -110,7 +110,7 @@
 @implementation InitialViewControllerPresenter(InitialViewInteractorDelegate)
 
 - (void)initialViewInteractor:(InitialViewInteractor *)interactor didLoadImages:(NSArray *)images {
-    if([self.delegate respondsToSelector:@selector(initialViewControllerPresenter:loadedPictures:)]) {
+    if(self.isTracking && [self.delegate respondsToSelector:@selector(initialViewControllerPresenter:loadedPictures:)]) {
         [self.delegate initialViewControllerPresenter:self loadedPictures:images];
     }
 }
