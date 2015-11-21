@@ -46,17 +46,39 @@
 - (void)updateLocationServices {
     if (self.isTracking) {
         [self.locationManager startTracking];
+        [self notifyDelegateStartTracking];
     } else {
         [self.locationManager stopTracking];
+        [self notifyDelegateStopTracking];
     }
 }
 
+- (void)checkInteractorCanLoadData {
+    if(self.isTracking && ![self.interactor hasConnectionToRequestImages]) {
+        if([self.delegate respondsToSelector:@selector(initialViewControllerPresenter:errorOccurredLoadingPictures:)]) {
+            [self.delegate initialViewControllerPresenter:self errorOccurredLoadingPictures:NSLocalizedString(@"NO_CONNECTION_ERROR", nil)];
+        }
+    }
+}
+
+- (void)notifyDelegateStopTracking {
+    if([self.delegate respondsToSelector:@selector(initialViewControllerPresenterDidStopTracking:)]) {
+        [self.delegate initialViewControllerPresenterDidStopTracking:self];
+    }
+}
+
+- (void)notifyDelegateStartTracking {
+    if([self.delegate respondsToSelector:@selector(initialViewControllerPresenterDidStartTracking:)]) {
+        [self.delegate initialViewControllerPresenterDidStartTracking:self];
+    }
+}
 
 #pragma mark - Public
 
 - (void)toggleTrackLocation {
     self.isTracking = !self.isTracking;
     [self updateLocationServices];
+    [self checkInteractorCanLoadData];
 }
 
 @end

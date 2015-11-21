@@ -14,4 +14,8 @@
 
 "STOP_WORD" = "Stop";
 
-"OK_WORD" = "Word";
+"OK_WORD" = "Ok";
+
+"ERROR_TITLE" = "Oops!";
+
+"NO_CONNECTION_ERROR" = "Looks like you don't have connection access!";

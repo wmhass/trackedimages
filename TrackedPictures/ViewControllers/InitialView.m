@@ -49,7 +49,30 @@ CGFloat const InitialViewFastAnimationDuration = 0.15;
     self.instructionsLabel.text = NSLocalizedString(@"INSTRUCTIONS_MESSAGE",nil);
 }
 
-
+- (void)toggleViewMode {
+    BOOL locationButtonActive = NO;
+    BOOL instructionsVisible = NO;
+    BOOL emptyStateVisible = YES;
+    
+    switch (self.mode) {
+        case InitialViewEmptyNotTrackingMode:
+            break;
+        case InitialViewEmptyTrackingMode:
+            emptyStateVisible = NO;
+            instructionsVisible = YES;
+            locationButtonActive = YES;
+            break;
+        case InitialViewNotEmptyTracking:
+            emptyStateVisible = NO;
+            instructionsVisible = NO;
+            locationButtonActive = YES;
+            break;
+    }
+    
+    [self updateLocationButton:locationButtonActive];
+    [self setInstructionsVisible:instructionsVisible];
+    [self setEmptyStateVisible:emptyStateVisible];
+}
 
 #pragma mark - Public
 
@@ -66,10 +89,10 @@ CGFloat const InitialViewFastAnimationDuration = 0.15;
     [UIView animateWithDuration:InitialViewFastAnimationDuration animations:animationBlock];
 }
 
-- (void)updateLocationButton:(BOOL)tracking {
+- (void)updateLocationButton:(BOOL)active {
     
     void (^changesBlock)(void) = ^{
-        if (tracking) {
+        if (active) {
             self.startStopButton.backgroundColor = [AppTheme activeColor];
             [self.startStopButton setTitleColor:[AppTheme textBaseColor] forState:UIControlStateNormal];
             [self.startStopButton setTitle:NSLocalizedString(@"STOP_WORD", nil) forState:UIControlStateNormal];
@@ -88,6 +111,11 @@ CGFloat const InitialViewFastAnimationDuration = 0.15;
     } else {
         self.tableView.tableHeaderView = nil;
     }
+}
+
+- (void)setMode:(InitialViewMode)mode {
+    _mode = mode;
+    [self toggleViewMode];
 }
 
 @end

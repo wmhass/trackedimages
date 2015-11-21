@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, InitialViewMode) {
+    InitialViewEmptyNotTrackingMode = 0,
+    InitialViewEmptyTrackingMode,
+    InitialViewNotEmptyTracking
+};
+
 @interface InitialView : UIView
 
+@property (nonatomic) InitialViewMode mode;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-- (void)updateLocationButton:(BOOL)tracking;
-- (void)setEmptyStateVisible:(BOOL)visible;
-- (void)setInstructionsVisible:(BOOL)visible;
 
 @end

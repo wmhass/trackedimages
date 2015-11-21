@@ -14,7 +14,8 @@
 @optional
 - (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter loadedPictures:(NSArray *)pictures;
 - (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter errorOccurredLoadingPictures:(NSString *)errorMessage;
-
+- (void)initialViewControllerPresenterDidStopTracking:(InitialViewControllerPresenter *)presenter;
+- (void)initialViewControllerPresenterDidStartTracking:(InitialViewControllerPresenter *)presenter;
 @end
 
 @interface InitialViewControllerPresenter : NSObject

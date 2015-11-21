@@ -23,5 +23,6 @@
 @property (weak, nonatomic) id<InitialViewInteractorDelegate> delegate;
 
 - (void)requestImagesForLocation:(CLLocation *)location;
+- (BOOL)hasConnectionToRequestImages;
 
 @end

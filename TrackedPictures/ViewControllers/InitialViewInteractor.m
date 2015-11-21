@@ -14,10 +14,23 @@
 
 @implementation InitialViewInteractor
 
+#pragma mark - Initializers
+
+- (id)init {
+    self = [super init];
+    if(self) {
+        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    }
+    return self;
+}
+
+
 #pragma mark - Public
 
 - (void)requestImagesForLocation:(CLLocation *)location {
-    
+    if(![self hasConnectionToRequestImages]) {
+        return;
+    }
     static dispatch_queue_t requestQueue = nil;
     
     static dispatch_once_t onceToken;
@@ -29,6 +42,10 @@
     dispatch_async(requestQueue, ^{
         [weakSelf executeRequestForLocation:location];
     });
+}
+
+- (BOOL)hasConnectionToRequestImages {
+    return [AFNetworkReachabilityManager sharedManager].reachable;
 }
 
 #pragma mark - Private

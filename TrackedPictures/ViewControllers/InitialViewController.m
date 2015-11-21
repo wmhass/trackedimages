@@ -36,11 +36,24 @@
     self.sizingCell = [[nib instantiateWithOwner:nil options:nil] lastObject];
 }
 
+#pragma mark - Private
+
+- (void)toggleViewMode {
+    InitialViewMode mode = InitialViewEmptyNotTrackingMode;
+    
+    if(self.presenter.isTracking && self.pictures.count == 0) {
+        mode = InitialViewEmptyTrackingMode;
+    } else if(self.presenter.isTracking && self.pictures.count > 0) {
+        mode = InitialViewNotEmptyTracking;
+    }
+    self.view.mode = mode;
+}
+
 #pragma mark - IBActions
 
 - (IBAction)btnToggleLocationTouched:(id)sender {
     [self.presenter toggleTrackLocation];
-    [self.view updateLocationButton:self.presenter.isTracking];
+    [self toggleViewMode];
 }
 
 @end
@@ -60,8 +73,7 @@
     
     self.pictures = [NSArray arrayWithArray:allPictures];
     [self.view.tableView reloadData];
-    [self.view setInstructionsVisible:(self.pictures.count == 0)];
-    [self.view setEmptyStateVisible:(self.pictures.count == 0)];
+    [self toggleViewMode];
 }
 
 - (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter errorOccurredLoadingPictures:(NSString *)errorMessage {
@@ -69,9 +81,17 @@
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK_WORD", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
     }];
-    UIAlertController *alert = [[UIAlertController alloc] init];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"ERROR_TITLE",nil) message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)initialViewControllerPresenterDidStopTracking:(InitialViewControllerPresenter *)presenter {
+    self.pictures = nil;
+}
+
+- (void)initialViewControllerPresenterDidStartTracking:(InitialViewControllerPresenter *)presenter {
+    [self.view.tableView reloadData];
 }
 
 @end
