@@ -52,7 +52,7 @@
 
 + (NSString *)urlForLocation:(CLLocation *)location {
     
-    return [NSString stringWithFormat:@"http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=20&minx=%.10f&miny=%.10f&maxx=%.10f&maxy=%.10f&size=medium&mapfilter=true",location.coordinate.longitude,location.coordinate.latitude, location.coordinate.longitude+0.001,location.coordinate.latitude+0.001];
+    return [NSString stringWithFormat:@"http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=20&minx=%.10f&miny=%.10f&maxx=%.10f&maxy=%.10f&size=medium&mapfilter=true",location.coordinate.longitude,location.coordinate.latitude, location.coordinate.longitude+0.0005,location.coordinate.latitude+0.0005];
 }
 
 - (void)executeRequestForLocation:(CLLocation *)location {
