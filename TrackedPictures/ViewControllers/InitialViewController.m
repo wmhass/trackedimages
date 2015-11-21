@@ -40,7 +40,6 @@
 
 - (IBAction)btnToggleLocationTouched:(id)sender {
     [self.presenter toggleTrackLocation];
-    [self.view setEmptyStateVisible:!(self.presenter.isTracking)];
     [self.view updateLocationButton:self.presenter.isTracking];
 }
 
@@ -61,6 +60,8 @@
     
     self.pictures = [NSArray arrayWithArray:allPictures];
     [self.view.tableView reloadData];
+    [self.view setInstructionsVisible:(self.pictures.count == 0)];
+    [self.view setEmptyStateVisible:(self.pictures.count == 0)];
 }
 
 - (void)initialViewControllerPresenter:(InitialViewControllerPresenter *)presenter errorOccurredLoadingPictures:(NSString *)errorMessage {
@@ -84,10 +85,10 @@
 @implementation InitialViewController(UITableViewDelegate)
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.sizingCell layoutWithPicture:self.pictures[indexPath.row]];
     [self.sizingCell setNeedsLayout];
     [self.sizingCell layoutIfNeeded];
-    
-    return CGRectGetHeight(self.sizingCell.contentView.frame);
+    return [self.sizingCell contentHeight];
 }
 
 @end

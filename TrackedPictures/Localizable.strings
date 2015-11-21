@@ -8,9 +8,9 @@
 
 "START_WORD" = "Start";
 
-"EMPTY_STATE_MESSAGE" = "Oops, Nothing here yet! Touch start and let's take some pictures!";
+"EMPTY_STATE_MESSAGE" = "Oops, Nothing here yet! Touch start to see some pictures!";
 
-"INSTRUCTIONS_MESSAGE" = "Once you take pictures, they'll appear here! What are you waiting for?! Let's walk!";
+"INSTRUCTIONS_MESSAGE" = "Let's walk!";
 
 "STOP_WORD" = "Stop";
 

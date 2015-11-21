@@ -22,7 +22,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        requestQueue = dispatch_queue_create("com.guidebook.blurrableImageViewQueue", DISPATCH_QUEUE_SERIAL);
+        requestQueue = dispatch_queue_create("com.TrackedPictures.DownloadPicturesQueue", DISPATCH_QUEUE_SERIAL);
     });
     
     __weak InitialViewInteractor *weakSelf = self;

@@ -7,9 +7,11 @@
 //
 
 #import "PanoramioPictureTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 NSString * const PanoramioPictureTableViewCellReuseIdentifier = @"PanoramioPictureTableViewCell";
 NSString * const PanoramioPictureTableViewCellNibName = @"PanoramioPictureTableViewCell";
+CGFloat const PanoramioPictureTableViewCellBottomPadding = 15;
 
 @interface PanoramioPictureTableViewCell()
 
@@ -47,10 +49,19 @@ NSString * const PanoramioPictureTableViewCellNibName = @"PanoramioPictureTableV
 
 - (void)configureWithImageURL:(NSURL *)imageURL titile:(NSString *)title ownerName:(NSString *)ownerName date:(NSString *)date {
     
+    if (imageURL) {
+        [self.pictureImageView sd_setImageWithURL:imageURL];
+    }
+    
     self.pictureTitleLabel.text = title;
     self.dateLabel.text = date;
     self.ownerNameLabel.text = ownerName;
     
+}
+
+- (CGFloat)contentHeight {
+    
+    return CGRectGetMaxY(self.ownerNameLabel.frame)+PanoramioPictureTableViewCellBottomPadding;
 }
 
 @end

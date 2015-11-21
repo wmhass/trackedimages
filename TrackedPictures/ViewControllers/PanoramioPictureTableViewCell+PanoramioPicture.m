@@ -24,7 +24,7 @@
         dateString = [dateFormatter stringFromDate:picture.uploadDate];
     }
     
-    [self configureWithImageURL:picture.URL titile:title ownerName:ownerName date:dateString];
+    [self configureWithImageURL:picture.fileURL titile:title ownerName:ownerName date:dateString];
 }
 
 @end
