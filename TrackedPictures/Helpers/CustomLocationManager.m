@@ -7,6 +7,7 @@
 //
 
 #import "CustomLocationManager.h"
+#import <UIKit/UIKit.h>
 
 const float CustomLocationManagerDistanceFilter = 100.0;
 
@@ -23,7 +24,11 @@ const float CustomLocationManagerDistanceFilter = 100.0;
     if(self) {
         self.distanceFilter = CustomLocationManagerDistanceFilter;
         self.desiredAccuracy = kCLLocationAccuracyBest;
+        self.allowsBackgroundLocationUpdates = YES;
         self.delegate = self;
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9) {
+            self.allowsBackgroundLocationUpdates = YES;
+        }
     }
     return self;
 }
