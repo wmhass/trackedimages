@@ -38,6 +38,10 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Look for pictures while you are moving!</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Look for pictures while you are moving!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Look for pictures while you are moving!</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
