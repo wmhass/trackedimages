@@ -1,3 +1,7 @@
+## Attention
+
+This project uses `Panoramio` API, which is a servic descontinued in 2016, so the requests will not work.
+
 ## About
 
 I, William Hass, created this project as a sample project that tracks the user's location and shows him pictures of places that he passed by, in order to proof some code concepts and implementations.
