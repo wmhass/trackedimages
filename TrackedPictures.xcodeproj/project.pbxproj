@@ -110,12 +110,12 @@
 		3D20E3C01BFF8B72000E2332 = {
 			isa = PBXGroup;
 			children = (
-				3D20E4091BFF9A34000E2332 /* CoreLocation.framework */,
+				1B2E82FC23C2508F708A0DD7 /* Frameworks */,
+				A36C47019C75E3C327612B80 /* Pods */,
+				3D20E3CA1BFF8B72000E2332 /* Products */,
 				3D20E3CB1BFF8B72000E2332 /* TrackedPictures */,
 				3D20E3E51BFF8B72000E2332 /* TrackedPicturesTests */,
-				3D20E3CA1BFF8B72000E2332 /* Products */,
-				A36C47019C75E3C327612B80 /* Pods */,
-				1B2E82FC23C2508F708A0DD7 /* Frameworks */,
+				3D20E4091BFF9A34000E2332 /* CoreLocation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,15 +131,15 @@
 		3D20E3CB1BFF8B72000E2332 /* TrackedPictures */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E4141BFFB84C000E2332 /* Models */,
 				3D20E3FC1BFF8D67000E2332 /* Helpers */,
+				3D20E4141BFFB84C000E2332 /* Models */,
+				3D20E3CC1BFF8B72000E2332 /* Supporting Files */,
 				3D20E3F21BFF8B7B000E2332 /* ViewControllers */,
 				3D20E3D01BFF8B72000E2332 /* AppDelegate.h */,
 				3D20E3D11BFF8B72000E2332 /* AppDelegate.m */,
-				3D20E3D61BFF8B72000E2332 /* Main.storyboard */,
 				3D20E3D91BFF8B72000E2332 /* Images.xcassets */,
 				3D20E3DB1BFF8B72000E2332 /* LaunchScreen.xib */,
-				3D20E3CC1BFF8B72000E2332 /* Supporting Files */,
+				3D20E3D61BFF8B72000E2332 /* Main.storyboard */,
 			);
 			path = TrackedPictures;
 			sourceTree = "<group>";
@@ -148,17 +148,18 @@
 			isa = PBXGroup;
 			children = (
 				3D20E3CD1BFF8B72000E2332 /* Info.plist */,
-				3D20E3CE1BFF8B72000E2332 /* main.m */,
 				3D20E4001BFF8ED7000E2332 /* Localizable.strings */,
+				3D20E3CE1BFF8B72000E2332 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3D20E3E51BFF8B72000E2332 /* TrackedPicturesTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E3E81BFF8B72000E2332 /* TrackedPicturesTests.m */,
 				3D20E3E61BFF8B72000E2332 /* Supporting Files */,
+				3D20E3E81BFF8B72000E2332 /* TrackedPicturesTests.m */,
 			);
 			path = TrackedPicturesTests;
 			sourceTree = "<group>";
@@ -169,13 +170,14 @@
 				3D20E3E71BFF8B72000E2332 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3D20E3F21BFF8B7B000E2332 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E41C1BFFC3E9000E2332 /* UIViews */,
 				3D20E4021BFF96B2000E2332 /* Controller Dependencies */,
+				3D20E41C1BFFC3E9000E2332 /* UIViews */,
 				3D20E3F91BFF8C88000E2332 /* InitialView.h */,
 				3D20E3FA1BFF8C88000E2332 /* InitialView.m */,
 				3D20E3F31BFF8BC0000E2332 /* InitialViewController.h */,
@@ -187,10 +189,10 @@
 		3D20E3FC1BFF8D67000E2332 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E40B1BFF9B7B000E2332 /* CustomLocationManager.h */,
-				3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */,
 				3D20E3FD1BFF8D86000E2332 /* AppTheme.h */,
 				3D20E3FE1BFF8D86000E2332 /* AppTheme.m */,
+				3D20E40B1BFF9B7B000E2332 /* CustomLocationManager.h */,
+				3D20E40C1BFF9B7B000E2332 /* CustomLocationManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -198,21 +200,22 @@
 		3D20E4021BFF96B2000E2332 /* Controller Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */,
-				3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */,
 				3D20E4061BFF96EE000E2332 /* InitialViewControllerPresenter.h */,
 				3D20E4071BFF96EE000E2332 /* InitialViewControllerPresenter.m */,
+				3D20E4111BFFB1B4000E2332 /* InitialViewInteractor.h */,
+				3D20E4121BFFB1B4000E2332 /* InitialViewInteractor.m */,
 			);
 			name = "Controller Dependencies";
+			path = "Controller Dependencies";
 			sourceTree = "<group>";
 		};
 		3D20E4141BFFB84C000E2332 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3D20E4181BFFB9B0000E2332 /* PanoramioPictureOwner.h */,
-				3D20E4191BFFB9B0000E2332 /* PanoramioPictureOwner.m */,
 				3D20E4151BFFB882000E2332 /* PanoramioPicture.h */,
 				3D20E4161BFFB882000E2332 /* PanoramioPicture.m */,
+				3D20E4181BFFB9B0000E2332 /* PanoramioPictureOwner.h */,
+				3D20E4191BFFB9B0000E2332 /* PanoramioPictureOwner.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				3D20E4201BFFC41D000E2332 /* PanoramioPictureTableViewCell.xib */,
 			);
 			name = UIViews;
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		A36C47019C75E3C327612B80 /* Pods */ = {
@@ -431,6 +435,7 @@
 				3D20E3D71BFF8B72000E2332 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3D20E3DB1BFF8B72000E2332 /* LaunchScreen.xib */ = {
@@ -439,6 +444,7 @@
 				3D20E3DC1BFF8B72000E2332 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -531,7 +537,7 @@
 			baseConfigurationReference = A7B5A02A3D81E4337C88D2DE /* Pods-TrackedPictures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TrackedPictures/Info.plist;
+				INFOPLIST_FILE = "TrackedPictures/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -542,7 +548,7 @@
 			baseConfigurationReference = 541413EF83FD3676F0D0122B /* Pods-TrackedPictures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TrackedPictures/Info.plist;
+				INFOPLIST_FILE = "TrackedPictures/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -560,7 +566,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TrackedPicturesTests/Info.plist;
+				INFOPLIST_FILE = "TrackedPicturesTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrackedPictures.app/TrackedPictures";
@@ -575,7 +581,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TrackedPicturesTests/Info.plist;
+				INFOPLIST_FILE = "TrackedPicturesTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrackedPictures.app/TrackedPictures";
