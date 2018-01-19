@@ -1,6 +1,6 @@
 ## Attention
 
-This project uses `Panoramio` API, which is a servic descontinued in 2016, so the requests will not work.
+This project uses `Panoramio` API, which is a service discontinued in 2016, so the requests will not work.
 
 ## About
 
